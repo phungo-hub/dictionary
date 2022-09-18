@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<label><input type="text" placeholder="Nhập từ..." id="word"></label>
+<button type="button">Dịch</button>
+<p id="result"></p>
+<script>
+    let button = document.querySelector('button')
+    function translate() {
+        let input = document.getElementById('word').value
+        let eng = ['apple', 'banana', 'chicken']
+        let viet = ['tao', 'chuoi', 'Tien']
+
+        for (let i = 0; i < eng.length; i++) {
+            if (input === eng[i]) {
+                document.getElementById('result').innerHTML = viet[i]
+            }
+        }
+    }
+    button.addEventListener('click', translate)
+</script>
+</body>
+</html>
